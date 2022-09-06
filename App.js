@@ -1,20 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView} from 'react-native';
 
 export default function App() {
+
+  const handlePress = () => console.log("we just got clicked!!")
+
   return (
-    <View style={styles.container}>
-      <Text>Sabahal Keeerrr Dunia!!! </Text>
+    <SafeAreaView style={styles.container}>
+      <Text numberOfLines={1} onPress={handlePress} >
+        Sabahal Keeerrr Dunia!!! I am going to make it, get a tech job by the beginning of next year. no excuses!!
+       </Text>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'pink',
   },
 });
