@@ -1,15 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, SafeAreaView, Image} from 'react-native';
 
 export default function App() {
 
-  const handlePress = () => console.log("we just got clicked!!")
+  const onPress = ()=>{
+    console.log("see the opacity!!")
+  }
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress} >
-        Sabahal Keeerrr Dunia!!! I am going to make it, get a tech job by the beginning of next year. no excuses!!
+      <Text >
+        Sabahal Keeerrr Dunia!!!
        </Text>
+       <TouchableOpacity onPress={onPress}>
+        <Image 
+          source={{
+            width: 200,
+            height: 300,
+            uri: "https://picsum.photos/200/300"
+          }}
+
+        />
+       </TouchableOpacity>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -18,6 +30,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: '#fff',
+    justifyContent: "center",
+    alignItems: "center"
   },
 });
