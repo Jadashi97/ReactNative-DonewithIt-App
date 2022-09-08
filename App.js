@@ -1,18 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, SafeAreaView, Image} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, SafeAreaView, Image, Button, Alert} from 'react-native';
 
 export default function App() {
 
-  const onPress = ()=>{
-    console.log("see the opacity!!")
-  }
+  //this is to handle the alert button and customize to my own need 
+
+  // const createTwoButtonAlert = ()=>{
+  //   Alert.alert(
+  //     "My Title", 
+  //     "write message here....",
+  //     [
+  //       {
+  //         text: "cancel",
+  //         onPress: ()=> console.log("cancel Pressed!!"),
+  //         style: "cancel"
+  //       },
+  //       {
+  //         text: "ok",
+  //         onPress: ()=> console.log("ok Pressed!!")
+  //       }
+  //     ],
+  //   )
+  // }
 
   return (
     <SafeAreaView style={styles.container}>
       <Text >
         Sabahal Keeerrr Dunia!!!
        </Text>
-       <TouchableOpacity onPress={onPress}>
+       {/* below we can import an image and add a few props to it e.g, Highlight, touchableOpacity */}
+       {/* <TouchableOpacity onPress={onPress}>
         <Image 
           source={{
             width: 200,
@@ -21,7 +38,15 @@ export default function App() {
           }}
 
         />
-       </TouchableOpacity>
+       </TouchableOpacity> */}
+      <Button
+       title='2 button alert' 
+
+       onPress={()=> // this adds a box alert to be able to add and submit a message
+        Alert.prompt("My title", "my message", (text) => console.log(text))
+       } 
+       color="red" 
+      />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
