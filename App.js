@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, SafeAreaView, Image, Button, Alert} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, SafeAreaView, Image, Button, Alert, View} from 'react-native';
 
 export default function App() {
 
@@ -24,10 +24,16 @@ export default function App() {
   // }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, styleContainer]}>
+      <View>
+        <Text>
+        Learning React-Native
+        </Text>
+        
+      </View>
       <Text >
-        Sabahal Keeerrr Dunia!!!
-       </Text>
+          Sabahal Keeerrr Dunia!!!
+      </Text>
        {/* below we can import an image and add a few props to it e.g, Highlight, touchableOpacity */}
        {/* <TouchableOpacity onPress={onPress}>
         <Image 
@@ -52,6 +58,8 @@ export default function App() {
   );
 }
 
+const styleContainer = { backgroundColor: "pink"}; // this style overides the previous style.. we add it as an array to the safeArea view style
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -59,4 +67,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-});
+}); 
