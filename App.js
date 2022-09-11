@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, SafeAreaView, Image, Button, Alert, View} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, SafeAreaView, Image, Button, Alert, View, Dimensions} from 'react-native';
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks'; //use this hook to easily flip around the 
 
 export default function App() {
 
@@ -23,17 +24,15 @@ export default function App() {
   //   )
   // }
 
+  //console.log(useDeviceOrientation()) // this checks out the the dimesions of the phone device you are working on
+  
   return (
-    <SafeAreaView style={[styles.container, styleContainer]}>
+    <SafeAreaView style={styles.container}>
       <View>
-        <Text>
-        Learning React-Native
+        <Text >
+            Sabahal Keeerrr Dunia!!!
         </Text>
-        
       </View>
-      <Text >
-          Sabahal Keeerrr Dunia!!!
-      </Text>
        {/* below we can import an image and add a few props to it e.g, Highlight, touchableOpacity */}
        {/* <TouchableOpacity onPress={onPress}>
         <Image 
@@ -58,12 +57,14 @@ export default function App() {
   );
 }
 
-const styleContainer = { backgroundColor: "pink"}; // this style overides the previous style.. we add it as an array to the safeArea view style
+// const styleContainer = { backgroundColor: "pink"}; // this style overides the previous style.. we add it as an array to the safeArea view style
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'dodgerblue',
+    width: "50%",
+    height: "30%",
     justifyContent: "center",
     alignItems: "center"
   },
