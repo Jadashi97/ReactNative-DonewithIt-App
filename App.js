@@ -27,7 +27,7 @@ export default function App() {
   //console.log(useDeviceOrientation()) // this checks out the the dimesions of the phone device you are working on
   
   return (
-
+    // this is to learn some of the css involved in styling our react-native app
     //this first view is the container that holds all the other containers
     <View
       style={{
@@ -36,23 +36,39 @@ export default function App() {
         flexDirection:'row', //places how you want the container to look(horizontal, vertical)
         justifyContent: "center", //this aligns items to the main axis (x-axis)
         alignItems: 'center', //this aligns item to the secondary axis
+        alignContent: "center", //aligns the content 
+        // flexWrap: "wrap",
       }}
     >
       <View style={{
         backgroundColor: "black",
         // flex: 1,
-        height: 300,
-        width: 100,
-        alignSelf: "center",
+        // flexgrow: 2, //works same as just flex
+        // flexBasis: 100,
+        height: 100,
+        width: 100, 
+        // alignSelf: "center",
       }}/>
       <View style={{
         backgroundColor: "tomato",
+        // flex: 1,
+        // flexShrink: 1,
+        height: 100,
+        width: 100,
+        top:25,
+        bottom: 25,
+        left: 5,
+        right: 5,
+        position: "relative", //by default its relatively positioned, when absolute, its independent of doesnt take part in normal layout
+      }}/>
+      <View style={{
+        backgroundColor: "green",
         // flex: 1,
         height: 100,
         width: 100,
       }}/>
       <View style={{
-        backgroundColor: "green",
+        backgroundColor: "greenyellow",
         // flex: 1,
         height: 100,
         width: 100,
