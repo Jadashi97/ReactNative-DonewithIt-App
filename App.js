@@ -28,9 +28,10 @@ export default function App() {
   //console.log(useDeviceOrientation()) // this checks out the the dimesions of the phone device you are working on
   
   return (
+      <WelcomeScreen/>
 
-    <WelcomeScreen/>
-
+    ) 
+  }
 
     //////////////////// THIS IS MAINLY TO LEARN ABOUT STYLING AND IN REACT NATIVE //////////////////
 
@@ -118,9 +119,6 @@ export default function App() {
     // </SafeAreaView>
 
     ////////////////////// THIS IS INITIALLY TO GET FAMILIAR WITH THE HOW AND WHERE TO LAYOUT STUFF IN REACT NATIVE//////////
-  
-  );
-}
 
 // const styleContainer = { backgroundColor: "pink"}; // this style overides the previous style.. we add it as an array to the safeArea view style
 
