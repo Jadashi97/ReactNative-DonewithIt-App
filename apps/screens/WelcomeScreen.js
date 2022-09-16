@@ -3,19 +3,22 @@ import { ImageBackground, StyleSheet, View} from 'react-native';
 
 function WelcomeScreen(props) {
     return (
-        <ImageBackground
-        styles = {styles.background}
-        source={require("../assets/background.jpg")}
-        >
-            <View style={styles.loginButton}></View>
-        </ImageBackground>
+        <View>
+            <ImageBackground
+            styles = {styles.image}
+            source={require("../assets/chair.jpg")}
+            resizeMode="cover"
+            >
+            </ImageBackground>
+        </View>
+            // <View style={styles.loginButton}></View>
     );
 }
 
 const styles = StyleSheet.create({
-    background:{
+    image:{
         flex: 1,
-        justifyContent: "flex-end",
+        justifyContent: "center",
     },
 
     loginButton:{

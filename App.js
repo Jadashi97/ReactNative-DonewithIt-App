@@ -28,7 +28,17 @@ export default function App() {
   //console.log(useDeviceOrientation()) // this checks out the the dimesions of the phone device you are working on
   
   return (
-      <WelcomeScreen/>
+    <SafeAreaView  style={styles.container}>
+      <View>
+        {/* <WelcomeScreen/>  */}
+        <View>
+           <Text >
+               Sabahal Keeerrr Dunia!!!
+           </Text>
+         </View>
+      </View>
+
+    </SafeAreaView>
 
     ) 
   }
@@ -122,13 +132,13 @@ export default function App() {
 
 // const styleContainer = { backgroundColor: "pink"}; // this style overides the previous style.. we add it as an array to the safeArea view style
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: 'dodgerblue',
-//     width: "50%",
-//     height: "30%",
-//     justifyContent: "center",
-//     alignItems: "center"
-//   },
-// }); 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'dodgerblue',
+    width: "50%",
+    height: "30%",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+}); 
